@@ -63,7 +63,7 @@ public class CustomerService {
         var customer = customerRepository.findById(id);
         var customerResponse = new CustomerModel();
         if (customer.isPresent()) {
-           customerResponse = buildCustomerResponse(customer.get());
+            customerResponse = buildCustomerResponse(customer.get());
         } else {
             throw new Exception("Customer with given id not found in DB.");
         }
