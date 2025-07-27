@@ -1,4 +1,4 @@
-package com.ecommerce.CustomerManagementService.config;
+package com.ecommerce.customermanagementservice.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;

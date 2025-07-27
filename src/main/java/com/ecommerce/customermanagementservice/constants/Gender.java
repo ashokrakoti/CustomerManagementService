@@ -1,4 +1,4 @@
-package com.ecommerce.CustomerManagementService.constants;
+package com.ecommerce.customermanagementservice.constants;
 
 public enum Gender {
     MALE("male"),

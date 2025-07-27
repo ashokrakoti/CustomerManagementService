@@ -1,4 +1,4 @@
-package com.ecommerce.CustomerManagementService.entities;
+package com.ecommerce.customermanagementservice.entities;
 
 import jakarta.persistence.*;
 import lombok.*;

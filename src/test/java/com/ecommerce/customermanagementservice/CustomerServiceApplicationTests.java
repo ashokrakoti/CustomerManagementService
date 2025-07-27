@@ -1,4 +1,4 @@
-package com.ecommerce.CustomerManagementService;
+package com.ecommerce.customermanagementservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

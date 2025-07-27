@@ -1,6 +1,6 @@
-package com.ecommerce.CustomerManagementService.Repository;
+package com.ecommerce.customermanagementservice.Repository;
 
-import com.ecommerce.CustomerManagementService.entities.Customer;
+import com.ecommerce.customermanagementservice.entities.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

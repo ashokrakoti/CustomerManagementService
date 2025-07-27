@@ -1,10 +1,10 @@
-package com.ecommerce.CustomerManagementService.service;
+package com.ecommerce.customermanagementservice.service;
 
-import com.ecommerce.CustomerManagementService.Repository.CustomerRepository;
-import com.ecommerce.CustomerManagementService.entities.Contact;
-import com.ecommerce.CustomerManagementService.entities.Customer;
-import com.ecommerce.CustomerManagementService.model.ContactModel;
-import com.ecommerce.CustomerManagementService.model.CustomerModel;
+import com.ecommerce.customermanagementservice.Repository.CustomerRepository;
+import com.ecommerce.customermanagementservice.entities.Contact;
+import com.ecommerce.customermanagementservice.entities.Customer;
+import com.ecommerce.customermanagementservice.model.ContactModel;
+import com.ecommerce.customermanagementservice.model.CustomerModel;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
