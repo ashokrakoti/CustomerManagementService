@@ -58,8 +58,10 @@ public class CustomerController {
             @Parameter(description = "ID of the customer to be retrieved", required = true)
             @PathVariable Long id) throws Exception {
         var response = customerService.getCustomerById(id);
-        return new ResponseEntity<>(response, HttpStatus.OK);
+        return ResponseEntity.ok(response);
     }
+
+
 
 //    // Update
 //    @PutMapping("/{id}")

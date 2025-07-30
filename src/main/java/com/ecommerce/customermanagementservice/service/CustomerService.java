@@ -3,6 +3,7 @@ package com.ecommerce.customermanagementservice.service;
 import com.ecommerce.customermanagementservice.Repository.CustomerRepository;
 import com.ecommerce.customermanagementservice.entities.Contact;
 import com.ecommerce.customermanagementservice.entities.Customer;
+import com.ecommerce.customermanagementservice.exception.CustomerNotFoundException;
 import com.ecommerce.customermanagementservice.model.ContactModel;
 import com.ecommerce.customermanagementservice.model.CustomerModel;
 import org.springframework.beans.BeanUtils;
@@ -23,11 +24,13 @@ public class CustomerService {
 
         Customer customer = new Customer();
         List<Contact> contacts = new ArrayList<Contact>();
+
         BeanUtils.copyProperties(customerModel, customer);
+
         contacts = customerModel.getContactsList().stream().map(contactModel -> {
             Contact contact = new Contact();
             BeanUtils.copyProperties(contactModel, contact);
-            contact.setCustomer(customer);
+            contact.setCustomer(customer);//we are setting the parent object to the child which is then saving the object in db as expected.
             return contact;
         }).toList();
         customer.setContactsList(contacts);
@@ -65,7 +68,7 @@ public class CustomerService {
         if (customer.isPresent()) {
             customerResponse = buildCustomerResponse(customer.get());
         } else {
-            throw new Exception("Customer with given id not found in DB.");
+            throw new CustomerNotFoundException("Customer with given id: " + id + " not found.");
         }
         return customerResponse;
     }
