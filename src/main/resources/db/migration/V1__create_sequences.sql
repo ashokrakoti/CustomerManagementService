@@ -1,0 +1,15 @@
+-- Create sequence for customer IDs
+CREATE SEQUENCE IF NOT EXISTS customer_id_seq
+    INCREMENT 1
+    START 1000
+    MINVALUE 1
+    MAXVALUE 9223372036854775807
+    CACHE 1;
+
+-- Create sequence for contact IDs
+CREATE SEQUENCE IF NOT EXISTS contact_id_seq
+    INCREMENT 1
+    START 1000
+    MINVALUE 1
+    MAXVALUE 9223372036854775807
+    CACHE 1;
